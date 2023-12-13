@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Annamalai Tiger Reservation Center</title>
+</head>
+
+<body>
+
+    <main id="main-content">
+        <header>
+            <img src="http://images5.fanpop.com/image/photos/28300000/Tiger-Eyes-Wallpaper-eyes-28331382-1600-1200.jpg" alt="">
+            <h1 style="font-family:serif">Annamalai Tiger Reserve</h1>
+        </header>
+
+        <section>
+            <h2 style="font-style:italic">Explore the Thrill of Tiger Safari</h2>
+            <p>Embark on a journey to discover the majestic world of tigers in their natural habitat.</p>
+            <button onclick="redirectToPackages()">Explore More</button>
+        </section>
+
+        <!-- Add space for a photo that fits the whole page except the header -->
+        <div class="main-image"></div>
+    </main>
+
+    <main id="packages-content" style="display:none;">
+        <section>
+            <h2 style="font-style:italic">Choose a Package</h2>
+            <div class="packages">
+                <button onclick="selectPackage(1)">Package 1</button>
+                <button onclick="selectPackage(2)">Package 2</button>
+                <button onclick="selectPackage(3)">Package 3</button>
+            </div>
+        </section>
+
+        <!-- Add space for a photo that fits the whole page except the header -->
+        <div class="main-image"></div>
+
+        <div id="booking-details" style="display:none;">
+            <label for="quantity">Select Quantity:</label>
+            <select id="quantity" name="quantity">
+                <!-- Options from 1 to 10 -->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="age">Enter Your Age:</label>
+            <input type="number" id="age" name="age" min="1">
+
+            <button onclick="bookPackage()">Book Now</button>
+
+            <div id="package-details">
+                <!-- Package details will be displayed here -->
+            </div>
+        </div>
+
+        <button style="background-color: black; color: white;" onclick="goBack()">Back</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
